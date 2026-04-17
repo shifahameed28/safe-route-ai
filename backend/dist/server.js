@@ -19,6 +19,9 @@ app.use((0, helmet_1.default)());
 app.get("/", (req, res) => {
     res.json({ message: "Backend is running ✅" });
 });
+console.log("Loading geocode routes...");
+app.use("/api/geocode", geocode_1.default);
+console.log("Geocode routes loaded");
 app.use("/api/auth", auth_1.default);
 app.use("/api/reports", reports_1.default);
 app.use("/api/geocode", geocode_1.default);
