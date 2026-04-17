@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
   res.json({ message: "Backend is running ✅" });
 });
 
+console.log("Loading geocode routes...");
+app.use("/api/geocode", geocodeRoutes);
+console.log("Geocode routes loaded");
+
 app.use("/api/auth", authRoutes);
 app.use("/api/reports", reportRoutes);
 app.use("/api/geocode", geocodeRoutes);
