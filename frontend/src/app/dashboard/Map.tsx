@@ -39,7 +39,7 @@ export default function Map({ routeRequest }: any) {
 
   async function geocode(place: string) {
     const res = await fetch(
-      `http://localhost:5000/api/geocode?q=${encodeURIComponent(place)}`
+      `https://safe-route-ai-wmmb.onrender.com/api/geocode?q=${encodeURIComponent(place)}`
     );
     const data = await res.json();
     return data[0];
